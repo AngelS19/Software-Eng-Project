@@ -55,7 +55,7 @@
             <li> Footer 2 </a></li>
             <li> Footer 3 </a></li>
 <!--                
-asdasdasdasdasdasd
+asdasdasdasdasdasdabcd
 <li><a href="<%out.println(getServletContext().getInitParameter("Footer-Value6"));%>"><%out.println(getServletContext().getInitParameter("Footer-Value3"));%></a></li>
                 <li><a href="<%out.println(getServletContext().getInitParameter("Footer-Value7"));%>"><%out.println(getServletContext().getInitParameter("Footer-Value4"));%></a></li>-->
             </ul>
