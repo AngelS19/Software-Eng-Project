@@ -10,7 +10,7 @@
     </head>
     <body>
         <header>
-            <a class="logos" href="index.jsp">SOA Management System for Red Hoteel</a>
+            <a class="logos" href="index.jsp">SOA Management System for Red Hotel</a>
             <ul class="right">
             <li><a> Header1 </a></li>
             <li><a> Header2 </a></li>
