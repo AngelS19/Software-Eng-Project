@@ -100,7 +100,7 @@
                 <tr class="tableodd">
                         <td width="11%" style="text-align:center" text-align="Center"> SOA NO. </td>
                         <td width="11%" style="text-align:center"> Date Created </td>
-                        <td width="11%" style="text-align:center"> Client/Company </td>
+                        <td width="11%" style="text-align:center"> Client/Companys </td>
                         <td width="11%" style="text-align:center"> OR Number </td>
                         <td width="11%" style="text-align:center"> Payable </td>
                         <td width="11%" style="text-align:center"> Payment Status </td>
