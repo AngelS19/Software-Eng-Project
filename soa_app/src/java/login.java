@@ -52,18 +52,31 @@ public void init(ServletConfig config) throws ServletException {
             String loginpass = request.getParameter("loginpass");
             ResultSet verify = model1.Verify(conn,loginuser);
             String encryptedpass = model1.getPass(conn, loginuser);
-            
+            ResultSet results = model1.SelectHomeValue(conn);
+            session.setAttribute("results",results);
+                    ResultSet results1 = model1.SelectAll(conn);
+          session.setAttribute("results1",results1);
+//               String button = request.getParameter("button-search");
+
+               
             if(conn == null){
                 response.sendRedirect("forgot_pass.jsp");   
             }
             else if(verify == null){
-                response.sendRedirect("forgot_pass.jsp");   
+                request.getRequestDispatcher("forgot_pass.jsp").forward(request,response);
             }
             else if(!loginpass.equals(encryptedpass)){
-                response.sendRedirect("forgot_pass.jsp");   
+                request.getRequestDispatcher("forgot_pass.jsp").forward(request,response);   
             }
+//            else if(button.equals("Date Search")){
+//                               String date1 = request.getParameter("Date1");
+//               String date2 = request.getParameter("Date2");
+//                               session.setAttribute("Date1",date1);
+//               session.setAttribute("Date2",date2);
+//               request.getRequestDispatcher("index.jsp").forward(request,response); 
+//            }
             else{
-                response.sendRedirect("homepage.jsp");
+                request.getRequestDispatcher("homepage.jsp").forward(request,response);
             }
 
     }

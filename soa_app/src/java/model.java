@@ -68,4 +68,40 @@ public class model {
         }
         return pass;
     }
+    
+        public ResultSet SelectHomeValue(Connection conn){
+        try{
+            String query = "SELECT overview.soa_num, overview.soa_date, overview.cust_name, payment_info.or_num, payment_info.payable, payment_info.payment_stat, payment_info.payment_date, overview.username FROM soa_table.main_info join soa_table.overview on main_info.soa_num = overview.soa_num join soa_table.payment_info on payment_info.soa_num = overview.soa_num";
+            PreparedStatement ps = conn.prepareStatement(query,ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+//            ps.setString(1, usern);
+            ResultSet records = ps.executeQuery();
+            if(records.next()){
+               records.beforeFirst();
+               return records;
+            }
+        }
+        catch(SQLException sqle){
+            sqle.printStackTrace();
+        }
+        return null;  
+    }
+        
+            public ResultSet SelectAll(Connection conn){
+        try{
+            String query = "SELECT * from main_info";
+            PreparedStatement ps = conn.prepareStatement(query,ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet records = ps.executeQuery();
+            if(records.next()){
+               records.beforeFirst();
+               return records;
+            }
+        }
+        catch(SQLException sqle){
+            sqle.printStackTrace();
+        }
+        return null;
+        
+    }
+    
+    
 }

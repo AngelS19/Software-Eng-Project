@@ -26,6 +26,11 @@
         <form method="POST" action="${pageContext.request.contextPath}/login">
             <div class="input-box">
                 <h4 class="detail">Email Address</h4>
+                <% out.println(session.getAttribute("Date1"));%>
+                <br>
+                <% out.println(session.getAttribute("Date2"));%>
+                                <br>
+                <% out.println(session.getAttribute("Value"));%>
                 <input name="loginuser" type ="text" size="30" placeholder="Email Address"/>
             </div>
           <div class="user-details">

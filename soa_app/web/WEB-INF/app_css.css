@@ -1,4 +1,4 @@
-
+ 
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
@@ -11,7 +11,7 @@ body{
   height:100%;
   margin-top: 100px;
   margin-bottom: 20px;
-  display: flex;
+/*  display: flex;*/
   justify-content: center;
   align-items: center;
   padding: 10px;
@@ -30,7 +30,7 @@ body{
 }
 
 .container-homepage{
-  margin-bottom: 160px;
+  margin-bottom: 20px;
   max-width: 2500px;
   width: 100%;
   background-color: #fff;
@@ -38,19 +38,33 @@ body{
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.15);
   text-align: justify;
+  
 }
 .container-grey{
   margin-bottom: 10px;
   margin-top: 10px;
   max-width: 2500px;
   max-height: 2500px;
-  width: 100%;
+  width: 90%;
   height: 100%;
   background-color: #EDEDED;
   padding: 25px 30px;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.15);
   text-align: justify;
+  
+  display: inline-block;
+  vertical-align: middle;
+}
+.child{
+  display: inline-block;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+}
+.container-parent{
+
+  text-align: center;
+  display:flex;
 }
 
 .container-login{
@@ -121,23 +135,37 @@ body{
   justify-content: flex-start;
   margin: 20px 0 12px 0;
   
-
+  
 }
 .container-homepage .content .user-details{
     margin-top: 0px;
 }
+
+
 .container-homepage .content .user-details form  {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   margin-top: 5px;
-  
-  width: calc(100% / 2 - 20px);
+/*  width: calc(100% / 2 - 20px);*/
     
+}
+
+.search-bar1{
+    margin-right: 70px;
+}
+
+.search-bar2{
+    margin-right: 110px;
+}
+.child .row-button{
+    margin-bottom: 10px;
+    height: 40px;
 }
 .container-homepage .content .user-details form .input-box{
   margin-bottom: 15px;
-  width: calc(100% / 4 );
+  margin-right: 5px;
+/*  width: calc(100% / 4 );*/
 }
 
 .container .content form .user-details .input-box{
@@ -160,6 +188,13 @@ form .user-details .input-box{
   margin-bottom: 15px;
 width: calc(100% / 2 - 20px);
 }*/
+table{
+    border-collapse: separate;
+    border-spacing: 2px 0;
+}
+td{
+    padding: 5px 0;
+}
 .header-table {
   background-color: #E27474;
   color:white;
@@ -217,7 +252,7 @@ form .input-box span .details{
  }
   .container-homepage .content form .button{
    height: 45px; 
-   width: 10%;
+/*   width: 10%;*/
  }
   .container .content  form .button{
    height: 45px;
@@ -231,6 +266,20 @@ form .input-box span .details{
    width: 200px;
    margin: 35px 0
  }*/
+ form .row-button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 300;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: #E27474;
+ }
+ 
  form .button input{
    height: 100%;
    width: 100%;
@@ -242,11 +291,12 @@ form .input-box span .details{
    letter-spacing: 1px;
    cursor: pointer;
    transition: all 0.3s ease;
-   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+   background: #E27474;
  }
  form .button input:hover{
   /* transform: scale(0.99); */
-  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  color: black;
+  background: #FFFF;
   }
  @media(max-width: 584px){
  .container{
@@ -301,7 +351,7 @@ header
     align-items: center;
     padding: 15px 0px;
     z-index: 10;
-    background: linear-gradient(#614385, #516395);
+    background: #E27474;
 }
 
 
@@ -373,7 +423,7 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  background: linear-gradient(#614385, #516395);
+  background: #E27474;
   color: white;
   display: flex;
   justify-content: space-between;
